@@ -6,6 +6,7 @@ import Brush from "../tools/Brush";
 import Rect from "../tools/Rect";
 import Circle from "../tools/Circle";
 import Eraser from "../tools/Eraser";
+import Line from "../tools/Line";
 
 const Toolbar = () => {
 
@@ -25,13 +26,17 @@ const Toolbar = () => {
         toolState.setTool(new Eraser(canvasState.canvas))
     };
 
+    const handleLine = () => {
+        toolState.setTool(new Line(canvasState.canvas))
+    };
+
     return (
         <div className="toolbar">
             <button className="toolbar__btn toolbar__btn--brush" onClick={handleBrush}/>
             <button className="toolbar__btn toolbar__btn--rect" onClick={handleRect}/>
             <button className="toolbar__btn toolbar__btn--circle" onClick={handleCircle}/>
             <button className="toolbar__btn toolbar__btn--eraser" onClick={handleEraser}/>
-            <button className="toolbar__btn toolbar__btn--line" />
+            <button className="toolbar__btn toolbar__btn--line" onClick={handleLine}/>
             <input type="color" className="toolbar__color-palette"/>
 
             <button className="toolbar__btn toolbar__btn--undo" />
