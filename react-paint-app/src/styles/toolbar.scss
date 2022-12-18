@@ -80,4 +80,9 @@
   width: 100%;
   box-shadow: 0 4px 5px gray;
   top: $toolbar-height;
+  padding: 0 20px 0 20px;
+}
+
+#line-width, #stroke-color {
+  margin: 0 10px;
 }
