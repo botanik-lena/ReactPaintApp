@@ -13,12 +13,10 @@ class ToolState {
 
     setFillColor(color) {
         this.tool.fillColor = color;
-        console.log("fill in state ", color);
     }
 
     setStrokeColor(color) {
         this.tool.strokeColor = color;
-        console.log("stroke in state ", color);
     }
 
     setLineWidth(width) {
